@@ -18,7 +18,7 @@
     "react/jsx-max-props-per-line": [
       "error",
       {
-        "maximum": 1
+        "maximum": 2
       }
     ],
     "react/no-array-index-key": "off",

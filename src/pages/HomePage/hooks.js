@@ -1,8 +1,9 @@
 import { useQuery } from 'react-query'
-import { useGlobalState } from 'store'
-import { getUserAPI } from './api'
 
-const USER_QUERY_KEY = 'user'
+import { useGlobalState } from 'global/state'
+
+import { getUserAPI } from './api'
+import { USER_QUERY_KEY } from './constants'
 
 export const useUser = () => {
   const {

@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { useUser } from 'services/users/user/hook'
-
 import { Container } from 'components/layout/Container'
 import { Button } from 'components/Button'
 
 import styles from './styles.module.scss'
+import { useUser } from './hooks'
+
 import { Greeting } from './components/Greeting'
 
 export const HomePage = () => {

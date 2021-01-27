@@ -2,8 +2,15 @@ $font-family: 'Montserrat', sans-serrif;
 $background-color: #333333;
 $main-color: #773be2;
 
+$theme-colors: (
+  'info': tomato,
+  'danger': teal
+);
+
 @mixin for-tablet-and-less {
   @media screen and (max-width: 900px) {
     @content;
   }
 }
+
+@import 'bootstrap/scss/bootstrap';
