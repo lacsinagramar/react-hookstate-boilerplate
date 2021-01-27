@@ -24,7 +24,8 @@
     "test": "react-scripts test",
     "eslint": "eslint src --fix",
     "stylelint": "stylelint **/*.scss",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:fix": "eslint src --fix && stylelint **/*.scss --fix"
   },
   "husky": {
     "hooks": {

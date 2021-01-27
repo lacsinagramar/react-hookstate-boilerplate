@@ -1,10 +1,10 @@
 $font-family: 'Montserrat', sans-serrif;
-$background-color: #333333;
+$background-color: #333;
 $main-color: #773be2;
 
 $theme-colors: (
-  'info': tomato,
-  'danger': teal
+  'danger': tomato,
+  'primary': teal
 );
 
 @mixin for-tablet-and-less {
