@@ -4,14 +4,14 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import { queryCache } from 'store/state'
+import { queryClient } from 'store/state'
 import { HomePage } from 'pages/HomePage'
 import { Routes } from 'global/routes'
-import { ReactQueryCacheProvider } from 'react-query'
+import { QueryClientProvider } from 'react-query'
 
 const App = () => (
   <Router>
-    <ReactQueryCacheProvider queryCache={queryCache}>
+    <QueryClientProvider client={queryClient}>
       <Switch>
         <Route
           exact
@@ -19,7 +19,7 @@ const App = () => (
           component={HomePage}
         />
       </Switch>
-    </ReactQueryCacheProvider>
+    </QueryClientProvider>
   </Router>
 )
 

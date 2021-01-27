@@ -1,4 +1,4 @@
-import { QueryCache } from 'react-query'
+import { QueryClient } from 'react-query'
 import { createState, useState } from '@hookstate/core'
 import { LocalForage } from 'utils/hookstate/LocalForage'
 
@@ -14,7 +14,7 @@ export const useGlobalState = () => {
   return globalState
 }
 
-export const queryCache = new QueryCache({
+export const queryClient = new QueryClient({
   defaultConfig: {
     queries: {
       staleTime: Infinity, // Change to milliseconds in case you want to refetch data in the background
