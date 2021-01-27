@@ -4,7 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import { queryCache } from 'global/state'
+import { queryCache } from 'store/state'
 import { HomePage } from 'pages/HomePage'
 import { Routes } from 'global/routes'
 import { ReactQueryCacheProvider } from 'react-query'

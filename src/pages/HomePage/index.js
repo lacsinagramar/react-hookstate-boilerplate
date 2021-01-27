@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import { Container } from 'components/layout/Container'
 import { Button } from 'components/Button'
@@ -20,6 +22,7 @@ export const HomePage = () => {
           <div className={styles.userButton}>
             <Button onClick={getUser}>
               {isLoading ? 'Fetching...' : 'GET USER'}
+              <FontAwesomeIcon icon={faCoffee} />
             </Button>
           </div>
         </div>
