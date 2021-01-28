@@ -15,12 +15,10 @@
     ],
     "react/prop-types": 0,
     "react/jsx-one-expression-per-line": "off",
-    "react/jsx-max-props-per-line": [
-      "error",
-      {
-        "maximum": 2
-      }
-    ],
+    "react/jsx-max-props-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "react/forbid-prop-types": "off",
     "react/no-array-index-key": "off",
     "no-underscore-dangle": 0,
     "import/imports-first": ["off", "off"],
