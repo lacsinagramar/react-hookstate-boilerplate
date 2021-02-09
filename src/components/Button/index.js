@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Button as BSButton } from 'react-bootstrap'
 
-export const Button = ({
+const Button = ({
   type = 'button',
   children,
   onClick,
@@ -11,3 +12,11 @@ export const Button = ({
     {children}
   </BSButton>
 )
+
+Button.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+  type: PropTypes.string
+}
+
+export default Button
