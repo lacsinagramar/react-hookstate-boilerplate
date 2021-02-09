@@ -1,16 +1,13 @@
 import React from 'react'
-import styles from './styles.module.scss'
+import { Button as BSButton } from 'react-bootstrap'
 
 export const Button = ({
   type = 'button',
   children,
-  onClick
+  onClick,
+  ...rest
 }) => (
-  <button
-    type={type}
-    className={styles.button}
-    onClick={onClick}
-  >
+  <BSButton type={type} onClick={onClick} {...rest}>
     {children}
-  </button>
+  </BSButton>
 )
