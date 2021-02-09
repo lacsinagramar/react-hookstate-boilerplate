@@ -1,1 +1,1 @@
-export const USER_QUERY_KEY = 'homepage/user'
+export const USER_QUERY_KEY = 'login/user'

@@ -6,7 +6,7 @@ import { Form } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-import { Button } from 'components/Button'
+import Button from 'components/Button'
 import FormControl from 'components/Form/FormControl'
 
 import styles from './styles.module.scss'
