@@ -1,4 +1,6 @@
-$font-family: 'Montserrat', sans-serrif;
+@import './style-config/flex-columns';
+
+$font-family: helvetica-neue;
 $background-color: #333;
 $main-color: #773be2;
 
@@ -8,6 +10,14 @@ $primary-dark: #0f3e5c;
 $danger: #f00;
 $secondary: #f88801;
 $gray: #f8f8fa;
+
+@mixin for-tablet-and-less {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+// BOOTSTRAP CSS CUSTOMIZATION
 
 $theme-colors: (
   'primary': $primary,
@@ -26,11 +36,5 @@ $spacers: (
   35: 35px,
   40: 40px
 );
-
-@mixin for-tablet-and-less {
-  @media screen and (max-width: 900px) {
-    @content;
-  }
-}
 
 @import 'bootstrap/scss/bootstrap';

@@ -1,9 +1,6 @@
 @import '~global/styles';
 
 .dashboardWrapper {
-  $leftMenuFlex: 0.15;
-  $contentFlex: 1 - $leftMenuFlex;
-
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -13,8 +10,6 @@
     flex: 1;
 
     .leftMenu {
-      flex: $leftMenuFlex;
-
       .navLink {
         opacity: 0.7;
 
@@ -30,23 +25,17 @@
         }
       }
     }
-
-    .body {
-      flex: $contentFlex;
-    }
   }
 
   .header {
     display: flex;
 
-    .logoWrapper {
-      flex: $leftMenuFlex;
+    &Title {
+      font-size: 21px;
     }
 
     .contentWrapper {
       display: flex;
-      justify-content: flex-end;
-      flex: $contentFlex;
     }
   }
 }

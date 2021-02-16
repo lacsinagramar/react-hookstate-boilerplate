@@ -16,12 +16,14 @@ const NavLink = ({ icon, title, to }) => {
   return (
     <Anchor
       href={to}
-      className={`${styles.navLink} ${isActive} d-block text-white pl-25 py-12`}
+      className={`${styles.navLink} ${isActive} d-block text-white px-25 py-12`}
     >
-      <span className={`${styles.iconWrapper} mr-15`}>
-        {icon}
-      </span>
-      {title}
+      <div className="d-flex">
+        <div className={`${styles.iconWrapper} mr-15`}>
+          {icon}
+        </div>
+        <div>{title}</div>
+      </div>
     </Anchor>
   )
 }
@@ -34,7 +36,9 @@ NavLink.propTypes = {
 
 const LeftNav = ({ links }) => {
   return (
-    <div className={`${styles.leftMenu} bg-primary pt-15`}>
+    <div
+      className={`${styles.leftMenu} bg-primary pt-15 flex-xs-2`}
+    >
       {links.map(link => (
         <NavLink
           key={link.to}

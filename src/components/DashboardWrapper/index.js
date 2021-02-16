@@ -1,5 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { find } from 'lodash'
+
+import { getLocationPathname } from 'utils/html/window'
 
 import styles from './styles.module.scss'
 import Header from './Header'
@@ -16,13 +19,22 @@ const defaultLinks = [
   }
 ]
 
-const DashboardWrapper = ({ children, links }) => {
+const DashboardWrapper = ({
+  children,
+  links = defaultLinks
+}) => {
+  const activeLink = find(
+    links,
+    link => link.to === getLocationPathname()
+  )
   return (
     <div className={styles.dashboardWrapper}>
-      <Header />
+      <Header title={activeLink.title} />
       <div className={styles.contentWrapper}>
-        <LeftNav links={links || defaultLinks} />
-        <div className={`${styles.body} bg-gray p-40`}>
+        <LeftNav links={links} />
+        <div
+          className={`${styles.body} bg-gray p-40 flex-xs-10`}
+        >
           {children}
         </div>
       </div>

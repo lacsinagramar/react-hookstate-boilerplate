@@ -1,0 +1,45 @@
+$oneOverTwelve: 1 / 12;
+$twoOverTwelve: 2 / 12;
+$threeOverTwelve: 3 / 12;
+$fourOverTwelve: 4 / 12;
+$fiveOverTwelve: 5 / 12;
+$sixOverTwelve: 6 / 12;
+$sevenOverTwelve: 7 / 12;
+$eightOverTwelve: 8 / 12;
+$nineOverTwelve: 9 / 12;
+$tenOverTwelve: 10 / 12;
+$elevenOverTwelve: 11 / 12;
+$full: 1;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$flexSizes: (
+  1: $oneOverTwelve,
+  2: $twoOverTwelve,
+  3: $threeOverTwelve,
+  4: $fourOverTwelve,
+  5: $fiveOverTwelve,
+  6: $sixOverTwelve,
+  7: $sevenOverTwelve,
+  8: $eightOverTwelve,
+  9: $nineOverTwelve,
+  10: $tenOverTwelve,
+  11: $elevenOverTwelve,
+  12: $full
+);
+
+@each $breakpoint, $size in $grid-breakpoints {
+  @each $column, $flexSize in $flexSizes {
+    .flex-#{$breakpoint}-#{$column} {
+      @media (min-width: $size) {
+        flex: #{$flexSize};
+      }
+    }
+  }
+}
