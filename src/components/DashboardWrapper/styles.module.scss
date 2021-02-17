@@ -6,7 +6,6 @@
   height: 100%;
 
   .contentWrapper {
-    display: flex;
     flex: 1;
 
     .leftMenu {
@@ -25,11 +24,13 @@
         }
       }
     }
+
+    .rightMenu {
+      border-left: 1px solid $bluish-gray;
+    }
   }
 
   .header {
-    display: flex;
-
     &Title {
       font-size: 21px;
     }

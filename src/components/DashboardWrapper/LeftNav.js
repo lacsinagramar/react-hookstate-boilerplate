@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { Col } from 'react-bootstrap'
 
 import { getLocationPathname } from 'utils/html/window'
 
@@ -36,8 +37,9 @@ NavLink.propTypes = {
 
 const LeftNav = ({ links }) => {
   return (
-    <div
-      className={`${styles.leftMenu} bg-primary pt-15 flex-xs-2`}
+    <Col
+      xs={2}
+      className={`${styles.leftMenu} bg-primary pt-15 px-0`}
     >
       {links.map(link => (
         <NavLink
@@ -47,7 +49,7 @@ const LeftNav = ({ links }) => {
           icon={<FontAwesomeIcon icon={faCoffee} />}
         />
       ))}
-    </div>
+    </Col>
   )
 }
 
