@@ -6,6 +6,7 @@ import { getUserAPI } from './api'
 import { USER_QUERY_KEY } from './constants'
 
 export const useUser = () => {
+  const { user } = useGlobalState()
   const {
     data,
     isLoading,
@@ -13,14 +14,9 @@ export const useUser = () => {
     refetch,
     isSuccess
   } = useQuery(USER_QUERY_KEY, getUserAPI, {
-    enabled: false
+    enabled: false,
+    onSuccess: userData => user.set(userData)
   })
-
-  const globalState = useGlobalState()
-
-  if (isSuccess) {
-    globalState.merge({ user: data })
-  }
 
   return {
     getUser: refetch,
